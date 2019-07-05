@@ -1,6 +1,6 @@
 package questions;
 
-public class MovingArrayElements {
+public class SwappingArrayElements {
 
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5,6,7,8,9,10};
@@ -14,26 +14,17 @@ public class MovingArrayElements {
 	
 	static int modifyArr(int[] arr, int n) {
 		
-		int[] newArr = new int[n];
+		int v = 0;
 		int k = arr.length - n;
-		int j =0;
 		for(int i = 0; i < arr.length; i++) {
-			j = i + n;
-			if(i < k ) {
-				if(i < n) {
-					newArr[i] = arr[i];
-				}
-				arr[i] = arr[j];
-				
+			if(n > 0) {
+				v = arr[i]; 
+				arr[i] = arr[k];
+				arr[k] = v;
 			}
-		}
-		
-		for(int i = 0; i < newArr.length; i++) {
-			arr[k] = newArr[i];
 			k++;
+			n--;
 		}
-		
-		
 		return arr.length;
 	}
 
