@@ -1,0 +1,24 @@
+// 	To convert from Integer Array to List of Integers
+	List<Integer> list = Arrays.stream(array).boxed().collect(Collectors.toList());
+	
+//	To find Duplicates 
+	list.stream().filter(i -> Collections.frequency(list, i) >1).collect(Collectors.toSet()).forEach(System.out::println);
+
+//	To get count Map
+	Map<Object, Long> map = list.stream().collect(Collectors.groupingBy(e -> e, Collectors.counting())) ;
+    	
+//	Adding elements to Existing List
+  	List<Integer> existingList = new ArrayList<>();
+    list.stream().sequential().collect(Collectors.toCollection(() -> existingList));
+    
+//  To find number of times an element is repeating
+	Collections.frequency(list, 4);		// eg. we are searching element 4 in a list of Integers
+	
+//  To reverse a range of numbers we use a method that
+	static IntStream revRange(int from, int to) {
+	    return IntStream.range(from, to).map(i -> to - i + from - 1);
+	}
+	example1: revRange(0, 5).toArray(), new int[]{4, 3, 2, 1, 0}
+	example2: revRange(-5, 0).toArray(), new int[]{-1, -2, -3, -4, -5}
+	example3: revRange(1, 4).toArray(), new int[]{3, 2, 1}
+			    
