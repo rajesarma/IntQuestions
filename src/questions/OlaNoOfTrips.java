@@ -54,6 +54,8 @@ public class OlaNoOfTrips {
 		
 		drivers.sort(Comparator.comparing(OlaDriver::getNoOfTrips).reversed().thenComparing(OlaDriver::getName) );
 		
+		Collections.sort(drivers, (c1, c2) -> c2.getNoOfTrips() );
+		
 //		Collections.sort(drivers, Comparator.comparing(OlaDriver::getNoOfTrips).reversed().thenComparing(OlaDriver::getName));
 		
 		drivers.forEach(System.out :: print);
