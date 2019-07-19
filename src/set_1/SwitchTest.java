@@ -6,7 +6,7 @@ public class SwitchTest {
 	public static void main(String argv[])
 	{
 		SwitchTest ms= new SwitchTest();
-		// ms.amethod();
+		 ms.amethod();
 		// Switch can take only int, string, enum values
 		// So the following code will not work
 		/*switch(i)

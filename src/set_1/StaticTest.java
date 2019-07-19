@@ -3,6 +3,8 @@ package set_1;
 
 class MyTest { 
     
+	
+	
 	static
     { 
 		System.out.println("Before Inii");
@@ -19,8 +21,8 @@ class MyTest {
     } 
   
     //private static boolean initialized1 = true; 
-    
     private static boolean initialized = false; 
+    
   
     private static void initialize() 
     { 

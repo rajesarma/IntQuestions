@@ -8,6 +8,9 @@ public class StaticBlocksAndVariables {
 
 	}
 	
+	static boolean flag=true;
+	static int i=20;
+	
 	static {
 		System.out.println("In static block");
 		
@@ -15,7 +18,6 @@ public class StaticBlocksAndVariables {
 		System.out.println(StaticBlocksAndVariables.i);
 	}
 	
-	static boolean flag=true;
-	static int i=20;
+	
 	
 }

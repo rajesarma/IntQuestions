@@ -63,7 +63,7 @@ public class FindingNamesOf3HighestEarningEmps {
 		Map<String, Long> empNameSalMap =  employess.stream()
 												.collect(Collectors.toMap(e -> e.getName(), e -> e.getSalary() ) );
 		
-		System.out.println(empNameSalMap);
+		System.out.println("empNameSalMap : "+empNameSalMap);
 		
 		
 		// To comma seperated Strings
@@ -71,7 +71,7 @@ public class FindingNamesOf3HighestEarningEmps {
 								.map(emp -> emp.getName())
 								.collect(Collectors.joining(","));
 
-		System.out.println(empNames);
+		System.out.println("comma seperated Strings : "+empNames);
 		
 		// Group by Salary
 		Map<Object, List<Employee>> empSalGroup1 =  employess.stream()

@@ -26,7 +26,7 @@ public class CompareTriplets {
 		for (int index=0; index < a1.length; index++) {
 			if(a1[index] > b1[index]) {
 				output[0] += 1;
-			} else {
+			} else if(a1[index] < b1[index]) {
 				output[1] += 1;
 			}
 		}
