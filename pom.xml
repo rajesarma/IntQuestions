@@ -39,14 +39,6 @@
     </dependency>
   </dependencies>
 
-  <repositories>
-    <repository>
-      <id>cce-virtual</id>
-      <name>cce-release</name>
-      <url>https://artifacts.dell.com/artifactory/cce-763143-maven-dev-local</url>
-    </repository>
-  </repositories>
-
   <build>
     <plugins>
       <plugin>
